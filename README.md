@@ -90,11 +90,20 @@
 ## **与synchronized方式的比较**
 
 ```java
-Lock是显式锁，需要手动实现开启和关闭操作，而synchronized是隐式锁，执行锁定代码后自动 释放。 Lock只有同步代码块方式的锁，而synchronized有同步代码块方式和同步方法两种锁。 使用Lock锁方式时，Java虚拟机将花费较少的时间来调度线程，因此性能更好。
+    Lock是显式锁，需要手动实现开启和关闭操作，而synchronized是隐式锁，执行锁定代码后自动 释放。 Lock只有同步代码块方式的锁，而synchronized有同步代码块方式和同步方法两种锁。 使用Lock锁方式时，Java虚拟机将花费较少的时间来调度线程，因此性能更好。
 ```
 
-# task13 -- 线程的创建
+# task13 -- 线程之间的通信实现
 
-# task14 -- 线程的创建
+| 方法声明                | 功能介绍                                                     |
+| ----------------------- | ------------------------------------------------------------ |
+| void wait()             | 用于使得线程进入等待状态，直到其它线程调用notify()或notifyAll()方 法 |
+| void wait(long timeout) | 用于进入等待状态，直到其它线程调用方法或参数指定的毫秒数已经过 去为止 |
+| void notify()           | 用于唤醒等待的单个线程                                       |
+| void notifyAll()        | 用于唤醒等待的所有线程                                       |
+
+# task14 -- 线程之生产者消费者模型
+
+![image-20220108154818162](https://gitee.com/SanjiFlip_admin/pictures/raw/master/imgs/image-20220108154818162.png)
 
 # task15 -- 线程的创建
